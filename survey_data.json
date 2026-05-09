@@ -1,0 +1,1829 @@
+{
+  "survey": [
+    {
+      "type": "start",
+      "name": "start"
+    },
+    {
+      "type": "end",
+      "name": "end"
+    },
+    {
+      "type": "acknowledge",
+      "name": "__001",
+      "label": "الموافقة/المصادقة المستنيرة بالمشاركة",
+      "hint": "هذا الاستبيان هو لتقييم هو لجمع المعلومات التقنية الخاصة بالمخاطر النفسية التي تؤثر سلبيا على الرفاه النفسي والاجتماعي، كل المعلومات هي سرية وطي الكتمان ولا احد يطلع عليها الا بموافقتك انت، هل توافق على اجراءه؟",
+      "required": "true"
+    },
+    {
+      "type": "text",
+      "name": "__002",
+      "label": "اسم الطفل",
+      "required": "true"
+    },
+    {
+      "type": "integer",
+      "name": "__003",
+      "label": "العمر",
+      "required": "true"
+    },
+    {
+      "type": "select_one eh11m78",
+      "name": "__004",
+      "label": "الجنس",
+      "required": "true"
+    },
+    {
+      "type": "text",
+      "name": "__005",
+      "label": "العنوان الكامل",
+      "required": "true"
+    },
+    {
+      "type": "integer",
+      "name": "__006",
+      "label": "رقم الهاتف",
+      "required": "true"
+    },
+    {
+      "type": "date",
+      "name": "__007",
+      "label": "تاريخ المقابلة",
+      "required": "true"
+    },
+    {
+      "type": "text",
+      "name": "__008",
+      "label": "اسم المعالج النفسي",
+      "required": "true"
+    },
+    {
+      "type": "select_one ch2qm86",
+      "name": "_",
+      "label": "المقاييس النفسية",
+      "required": "true",
+      "parameters": "randomize=false"
+    },
+    {
+      "type": "begin_group",
+      "name": "q1",
+      "appearance": "field-list",
+      "relevant": "${_} = 'q1'"
+    },
+    {
+      "type": "select_one qv09c88",
+      "name": "q1_header",
+      "label": "مقياس العزلة",
+      "hint": " طريقة الصحيح وتفسير النتائج: عدد الفقرات 11 فقرة \\ العلامة الكلية للمقياس يتم بجمع الارقام التي تم الحصول عليها وهي تتراوح بين (صفر - 33) \\ تفسير النتائج (صفر-16) لا يوجد شعور بالعزلة .. (17-33) تدل على وجود احساس بالعزلة، كلما ارتفعت الدرجة ارتفع مؤشر العزلة.",
+      "appearance": "label"
+    },
+    {
+      "type": "select_one qv09c88",
+      "name": "iso1",
+      "label": "اشعر بالفراغ والملل",
+      "required": "false",
+      "appearance": "list-nolabel"
+    },
+    {
+      "type": "select_one qv09c88",
+      "name": "iso2",
+      "label": "اشعر برغبة بالبكاء",
+      "required": "false",
+      "appearance": "list-nolabel"
+    },
+    {
+      "type": "select_one qv09c88",
+      "name": "iso3",
+      "label": "اشعر انه من الصعب على اتخاذ قرار",
+      "required": "false",
+      "appearance": "list-nolabel"
+    },
+    {
+      "type": "select_one qv09c88",
+      "name": "iso4",
+      "label": "اتخوف من يناء علاقات مع الاخرين",
+      "required": "false",
+      "appearance": "list-nolabel"
+    },
+    {
+      "type": "select_one qv09c88",
+      "name": "iso5",
+      "label": "الكثير من الناس لا يستحق الاحترام",
+      "required": "false",
+      "appearance": "list-nolabel"
+    },
+    {
+      "type": "select_one qv09c88",
+      "name": "iso6",
+      "label": "ليس لدي صديق مقرب اتحدث اليه عن الاشياء التي تخصني",
+      "required": "false",
+      "appearance": "list-nolabel"
+    },
+    {
+      "type": "select_one qv09c88",
+      "name": "iso7",
+      "label": "ليس في حياتي شيء جدير بالاهتمام",
+      "required": "false",
+      "appearance": "list-nolabel"
+    },
+    {
+      "type": "select_one qv09c88",
+      "name": "iso8",
+      "label": "اجد صعوبة في بناء صداقة جديدة",
+      "required": "false",
+      "appearance": "list-nolabel"
+    },
+    {
+      "type": "select_one qv09c88",
+      "name": "iso9",
+      "label": "اخجل من الناس ",
+      "required": "false",
+      "appearance": "list-nolabel"
+    },
+    {
+      "type": "select_one qv09c88",
+      "name": "iso10",
+      "label": "لا اجد من يهتم بمشاعري",
+      "required": "false",
+      "appearance": "list-nolabel"
+    },
+    {
+      "type": "select_one qv09c88",
+      "name": "iso11",
+      "label": "احب ان اقضي وقتي في حل الالغاز",
+      "required": "false",
+      "appearance": "list-nolabel"
+    },
+    {
+      "type": "end_group"
+    },
+    {
+      "type": "calculate",
+      "name": "calculation",
+      "required": "false",
+      "calculation": "${iso1}+${iso2}+${iso3}+${iso4}+${iso5} +${iso6}+${iso7}+${iso8}+${iso9}+${iso10} +${iso11}"
+    },
+    {
+      "type": "begin_group",
+      "name": "q2",
+      "appearance": "field-list",
+      "relevant": "${_} = 'q2'"
+    },
+    {
+      "type": "select_one fa86q45",
+      "name": "q2_header",
+      "label": "مقياس الاكتئاب",
+      "hint": "طريقة الصحيح وتفسير النتائج: عدد الفقرات 20 فقرة \\ العلامة الكلية للمقياس يتم بجمع الارقام التي تم الحصول عليها وهي تتراوح بين (صفر - 60) \\ تفسير النتائج (صفر-9) لا يوجد اكتئاب.. (10-15) اكتئاب ضعيف.. (16-23) اكتئاب متوسط...(23 فما فوق ) اكتئاب شديد",
+      "appearance": "label"
+    },
+    {
+      "type": "select_one fa86q45",
+      "name": "dep1",
+      "label": "لا اشعر بالحزن",
+      "required": "false",
+      "appearance": "list-nolabel"
+    },
+    {
+      "type": "select_one fa86q45",
+      "name": "dep2",
+      "label": "لست متشائما بشان المستقبل",
+      "required": "false",
+      "appearance": "list-nolabel"
+    },
+    {
+      "type": "select_one fa86q45",
+      "name": "dep3",
+      "label": "لا اشعر انني فاشل بشكل عام",
+      "required": "false",
+      "appearance": "list-nolabel"
+    },
+    {
+      "type": "select_one fa86q45",
+      "name": "dep4",
+      "label": "لم اعد اشعر باي متعة على الاطلاق",
+      "required": "false",
+      "appearance": "list-nolabel"
+    },
+    {
+      "type": "select_one fa86q45",
+      "name": "dep5",
+      "label": "لا يوجد لدي اي شعور بالذنب",
+      "required": "false",
+      "appearance": "list-nolabel"
+    },
+    {
+      "type": "select_one fa86q45",
+      "name": "dep6",
+      "label": "اشعر انني لا استحق العقاب",
+      "required": "false",
+      "appearance": "list-nolabel"
+    },
+    {
+      "type": "select_one fa86q45",
+      "name": "dep7",
+      "label": "اشعر بخيبة امل بنفسي",
+      "required": "false",
+      "appearance": "list-nolabel"
+    },
+    {
+      "type": "select_one fa86q45",
+      "name": "dep8",
+      "label": "الوم نفسي طيلة الوقت بسبب اخطائي",
+      "required": "false",
+      "appearance": "list-nolabel"
+    },
+    {
+      "type": "select_one fa86q45",
+      "name": "dep9",
+      "label": "لا يوجد لدي اي افكار لايذاء نفسي",
+      "required": "false",
+      "appearance": "list-nolabel"
+    },
+    {
+      "type": "select_one fa86q45",
+      "name": "dep10",
+      "label": "ابكي في هذه الايام اكثر من المعتاد",
+      "required": "false",
+      "appearance": "list-nolabel"
+    },
+    {
+      "type": "select_one fa86q45",
+      "name": "dep11",
+      "label": "اشغر انني سريع الغضب اكثر من المعتاد",
+      "required": "false",
+      "appearance": "list-nolabel"
+    },
+    {
+      "type": "select_one fa86q45",
+      "name": "dep12",
+      "label": "اصبحت اقل اهتمام بالناس الاخرين مما كنت عليه",
+      "required": "false",
+      "appearance": "list-nolabel"
+    },
+    {
+      "type": "select_one fa86q45",
+      "name": "dep13",
+      "label": "اعتقد انني اصبحت قبيحا",
+      "required": "false",
+      "appearance": "list-nolabel"
+    },
+    {
+      "type": "select_one fa86q45",
+      "name": "dep14",
+      "label": "لا استطيع انجاز اي شيء مطلقا",
+      "required": "false",
+      "appearance": "list-nolabel"
+    },
+    {
+      "type": "select_one fa86q45",
+      "name": "dep15",
+      "label": "لا انام جيدا كالمعتاد",
+      "required": "false",
+      "appearance": "list-nolabel"
+    },
+    {
+      "type": "select_one fa86q45",
+      "name": "dep16",
+      "label": "اصبحت اكثر تعبا من قبل",
+      "required": "false",
+      "appearance": "list-nolabel"
+    },
+    {
+      "type": "select_one fa86q45",
+      "name": "dep17",
+      "label": "شهيتي للطعام سيئة جدا هذه الايام",
+      "required": "false",
+      "appearance": "list-nolabel"
+    },
+    {
+      "type": "select_one fa86q45",
+      "name": "dep18",
+      "label": "لم افقد كثيرا من وزني او بقي كما هو",
+      "required": "false",
+      "appearance": "list-nolabel"
+    },
+    {
+      "type": "select_one fa86q45",
+      "name": "dep19",
+      "label": "اشعر بالآلام والمشاكل الصحية مثل الام المعدة او الامساك او الالام والاوجاع الجسمية العامة",
+      "required": "false",
+      "appearance": "list-nolabel"
+    },
+    {
+      "type": "select_one fa86q45",
+      "name": "dep20",
+      "label": "اهتماماتي الجسمانية قلت في هذه الايام",
+      "required": "false",
+      "appearance": "list-nolabel"
+    },
+    {
+      "type": "end_group"
+    },
+    {
+      "type": "calculate",
+      "name": "calculation_001",
+      "required": "false",
+      "calculation": "${dep1}+${dep2}+${dep3}+${dep4}+${dep5} +${dep6}+${dep7}+${dep8}+${dep9}+${dep10} +${dep11}+${dep12}+${dep13}+${dep14}+${dep15} +${dep16}+${dep17}+${dep18}+${dep19}+${dep20}"
+    },
+    {
+      "type": "begin_group",
+      "name": "q3",
+      "appearance": "field-list",
+      "relevant": "${_} = 'q3'"
+    },
+    {
+      "type": "select_one to2mv81",
+      "name": "q3_header",
+      "label": "مقياس العدوانية",
+      "hint": " طريقة الصحيح وتفسير النتائج: عدد الفقرات 22 فقرة \\ العلامة الكلية للمقياس يتم بجمع الارقام التي تم الحصول عليها وهي تتراوح بين (صفر - 44) \\ تفسير النتائج اعتبر ان العلامة (18) فما فوق مستوى عالي من العدانية",
+      "appearance": "label"
+    },
+    {
+      "type": "select_one to2mv81",
+      "name": "agra_1",
+      "label": "يسبب الاذى للآخرين بطريقة غير مباشرة",
+      "required": "false",
+      "appearance": "list-nolabel"
+    },
+    {
+      "type": "select_one to2mv81",
+      "name": "agra_2",
+      "label": "يبصق على الاخرين",
+      "required": "false",
+      "appearance": "list-nolabel"
+    },
+    {
+      "type": "select_one to2mv81",
+      "name": "agra_3",
+      "label": "يدفع او يخمش او يقرص الاخرين",
+      "required": "false",
+      "appearance": "list-nolabel"
+    },
+    {
+      "type": "select_one to2mv81",
+      "name": "agra_4",
+      "label": "يشد شعر الاخرين او اذانهم",
+      "required": "false",
+      "appearance": "list-nolabel"
+    },
+    {
+      "type": "select_one to2mv81",
+      "name": "agra_5",
+      "label": "يعض الاخرين",
+      "required": "false",
+      "appearance": "list-nolabel"
+    },
+    {
+      "type": "select_one to2mv81",
+      "name": "agra_6",
+      "label": "يرفس او يضرب او يصفع الاخرين",
+      "required": "false",
+      "appearance": "list-nolabel"
+    },
+    {
+      "type": "select_one to2mv81",
+      "name": "agra_7",
+      "label": "يحاول خنق الاخرين",
+      "required": "false",
+      "appearance": "list-nolabel"
+    },
+    {
+      "type": "select_one to2mv81",
+      "name": "agra_8",
+      "label": "يرمي الاشياء على الاخرين",
+      "required": "false",
+      "appearance": "list-nolabel"
+    },
+    {
+      "type": "select_one to2mv81",
+      "name": "agra_9",
+      "label": "يستخدم اشياء حادة مثل السكين ضد الاخرين",
+      "required": "false",
+      "appearance": "list-nolabel"
+    },
+    {
+      "type": "select_one to2mv81",
+      "name": "agra_10",
+      "label": "يشد او يمزق او يمضغ ملابسه",
+      "required": "false",
+      "appearance": "list-nolabel"
+    },
+    {
+      "type": "select_one to2mv81",
+      "name": "agra_11",
+      "label": "يلوث ممتلكاته",
+      "required": "false",
+      "appearance": "list-nolabel"
+    },
+    {
+      "type": "select_one to2mv81",
+      "name": "agra_12",
+      "label": "يمزق دفاتره او كنبه او اي ممتلكات اخرى",
+      "required": "false",
+      "appearance": "list-nolabel"
+    },
+    {
+      "type": "select_one to2mv81",
+      "name": "agra_13",
+      "label": "يمزق دفاتر او كتب او ممتلكات الاخرين",
+      "required": "false",
+      "appearance": "list-nolabel"
+    },
+    {
+      "type": "select_one to2mv81",
+      "name": "agra_14",
+      "label": "يمزق او يشد او يمضغ ملابس الاخرين",
+      "required": "false",
+      "appearance": "list-nolabel"
+    },
+    {
+      "type": "select_one to2mv81",
+      "name": "agra_15",
+      "label": "يلوث ملابس الاخرين",
+      "required": "false",
+      "appearance": "list-nolabel"
+    },
+    {
+      "type": "select_one to2mv81",
+      "name": "agra_16",
+      "label": "يمزق الكتب او الجرائد او اي ممتلكات عامة",
+      "required": "false",
+      "appearance": "list-nolabel"
+    },
+    {
+      "type": "select_one to2mv81",
+      "name": "agra_17",
+      "label": "يتعامل بخشونة مفرطة مع الاثاث (كسره او ضربه او رميه على الارض)",
+      "required": "false",
+      "appearance": "list-nolabel"
+    },
+    {
+      "type": "select_one to2mv81",
+      "name": "agra_18",
+      "label": "يكسر الشبابيك",
+      "required": "false",
+      "appearance": "list-nolabel"
+    },
+    {
+      "type": "select_one to2mv81",
+      "name": "agra_19",
+      "label": "يبكي ويصرخ",
+      "required": "false",
+      "appearance": "list-nolabel"
+    },
+    {
+      "type": "select_one to2mv81",
+      "name": "agra_20",
+      "label": "يضرب الاشياء بقدميه وهو يصرخ",
+      "required": "false",
+      "appearance": "list-nolabel"
+    },
+    {
+      "type": "select_one to2mv81",
+      "name": "agra_21",
+      "label": "يرمي بنفسه على الارض ويصيح ويصرخ",
+      "required": "false",
+      "appearance": "list-nolabel"
+    },
+    {
+      "type": "select_one to2mv81",
+      "name": "agra_22",
+      "label": "يضرب بقدميه او يغلق الابواب بعنف",
+      "required": "false",
+      "appearance": "list-nolabel"
+    },
+    {
+      "type": "end_group"
+    },
+    {
+      "type": "calculate",
+      "name": "calculation_002",
+      "required": "false",
+      "calculation": "${agra_1}+${agra_3}+${agra_4}+${agra_5}+${agra_6}+${agra_7}+${agra_8}+${agra_9}+${agra_10}+${agra_11}+${agra_12}+${agra_13}+${agra_14}+${agra_15}+${agra_16}+${agra_17}+${agra_18}+${agra_19}+${agra_20}+${agra_21}+${agra_22}"
+    },
+    {
+      "type": "begin_group",
+      "name": "q4",
+      "appearance": "field-list",
+      "relevant": "${_} = 'q4'"
+    },
+    {
+      "type": "select_one xm6zh72",
+      "name": "q4_header",
+      "label": "مقياس الصحة النفسية",
+      "hint": " طريقة الصحيح وتفسير النتائج: عدد الفقرات 15 فقرة \\ العلامة الكلية للمقياس يتم بجمع الارقام التي تم الحصول عليها وهي تتراوح بين (صفر - 15) \\ تفسير النتائج (13-15) تتمتع بصحة نفسية ممتازة، (9-12) تتمتع بصحة نفسية جيدة، (5-8) تعني انك تحتاج الى التوازن النفسي، اقل من 5 تعني ان لديك اضطرابا ما وتحتاج الى الدعم النفسي",
+      "appearance": "label"
+    },
+    {
+      "type": "select_one xm6zh72",
+      "name": "mh_1",
+      "label": "اشعر بالامان والاطمئنان عموما",
+      "required": "false",
+      "appearance": "list-nolabel"
+    },
+    {
+      "type": "select_one xm6zh72",
+      "name": "mh_2",
+      "label": "انا متزن في اتخاذ قراري",
+      "required": "false",
+      "appearance": "list-nolabel"
+    },
+    {
+      "type": "select_one xm6zh72",
+      "name": "mh_3",
+      "label": "من السهل علي التكيف مع متطلبات الحياة الواقعية",
+      "required": "false",
+      "appearance": "list-nolabel"
+    },
+    {
+      "type": "select_one xm6zh72",
+      "name": "mh_4",
+      "label": "لدي قدرة جيدة على التواصل الاجتماعي مع الاخربن",
+      "required": "false",
+      "appearance": "list-nolabel"
+    },
+    {
+      "type": "select_one xm6zh72",
+      "name": "mh_5",
+      "label": "يمكنني السيطرة على انفعالاتي وحساسيتي عموما",
+      "required": "false",
+      "appearance": "list-nolabel"
+    },
+    {
+      "type": "select_one xm6zh72",
+      "name": "mh_6",
+      "label": "اشجع التغيير في المجتمع واساعد بذلك",
+      "required": "false",
+      "appearance": "list-nolabel"
+    },
+    {
+      "type": "select_one xm6zh72",
+      "name": "mh_7",
+      "label": "اراجع نفسي لاجعل منها شخصية متكاملة",
+      "required": "false",
+      "appearance": "list-nolabel"
+    },
+    {
+      "type": "select_one xm6zh72",
+      "name": "mh_8",
+      "label": "اشعر بالانتماء والانسجام بالمجتمع الذي اعيش فيه",
+      "required": "false",
+      "appearance": "list-nolabel"
+    },
+    {
+      "type": "select_one xm6zh72",
+      "name": "mh_9",
+      "label": "يمكن وصفي بان اعصابي هادئة ومتزنة",
+      "required": "false",
+      "appearance": "list-nolabel"
+    },
+    {
+      "type": "select_one xm6zh72",
+      "name": "mh_10",
+      "label": "اثق بالمجتمع والناس الذين اتعامل معهم",
+      "required": "false",
+      "appearance": "list-nolabel"
+    },
+    {
+      "type": "select_one xm6zh72",
+      "name": "mh_11",
+      "label": "انا متسامح",
+      "required": "false",
+      "appearance": "list-nolabel"
+    },
+    {
+      "type": "select_one xm6zh72",
+      "name": "mh_12",
+      "label": "اشعر بالتفاؤل والسعادة والقناعة غالبا",
+      "required": "false",
+      "appearance": "list-nolabel"
+    },
+    {
+      "type": "select_one xm6zh72",
+      "name": "mh_13",
+      "label": "اهتم بالناس لدرجة اضحي براحتي من اجلهم",
+      "required": "false",
+      "appearance": "list-nolabel"
+    },
+    {
+      "type": "select_one xm6zh72",
+      "name": "mh_14",
+      "label": "لدي القدرة على حل مشاكلي بطريقة جيدة نوعا ما",
+      "required": "false",
+      "appearance": "list-nolabel"
+    },
+    {
+      "type": "select_one xm6zh72",
+      "name": "mh_15",
+      "label": "اكره العنف في تعاملي مع المحيطين بي ",
+      "required": "false",
+      "appearance": "list-nolabel"
+    },
+    {
+      "type": "end_group"
+    },
+    {
+      "type": "calculate",
+      "name": "calculation_003",
+      "required": "false",
+      "calculation": "${mh_1}+${mh_2}+${mh_3}+${mh_4}+${mh_5} +${mh_6}+${mh_7}+${mh_8}+${mh_9}+${mh_10} +${mh_11}+${mh_12}+${mh_13}+${mh_14}+${mh_15}"
+    },
+    {
+      "type": "begin_group",
+      "name": "q5",
+      "appearance": "field-list",
+      "relevant": "${_} = 'q5'"
+    },
+    {
+      "type": "select_one wq1dt68",
+      "name": "q5_header",
+      "label": "مقياس القلق والتوتر",
+      "hint": " طريقة الصحيح وتفسير النتائج: عدد الفقرات 35 فقرة \\ العلامة الكلية للمقياس يتم بجمع الارقام التي تم الحصول عليها وهي تتراوح بين (صفر - 70) \\ تفسير النتائج اعتبر ان العلامة (صفر) درجة منخفضة من التوتر النفسي، بينما (35) درجة متوسطة من التوتر النفسي، (70) درجة عالية من التوتر النفسي",
+      "appearance": "label"
+    },
+    {
+      "type": "select_one wq1dt68",
+      "name": "st_1",
+      "label": "اعاني كثيرا من الصداع",
+      "required": "false",
+      "appearance": "list-nolabel"
+    },
+    {
+      "type": "select_one wq1dt68",
+      "name": "st_2",
+      "label": "عندما اجلس للراحة اجد نفسي منهمكا بالأفكار السلبية",
+      "required": "false",
+      "appearance": "list-nolabel"
+    },
+    {
+      "type": "select_one wq1dt68",
+      "name": "st_3",
+      "label": "اشعر دائما بعدك الارتياح",
+      "required": "false",
+      "appearance": "list-nolabel"
+    },
+    {
+      "type": "select_one wq1dt68",
+      "name": "st_4",
+      "label": "نادرا ما اشعر بالاسترخاء التام",
+      "required": "false",
+      "appearance": "list-nolabel"
+    },
+    {
+      "type": "select_one wq1dt68",
+      "name": "st_5",
+      "label": "اشعر بعدم القدرة على التركيز",
+      "required": "false",
+      "appearance": "list-nolabel"
+    },
+    {
+      "type": "select_one wq1dt68",
+      "name": "st_6",
+      "label": "اشعر دائما وكأنني تحت الضغط",
+      "required": "false",
+      "appearance": "list-nolabel"
+    },
+    {
+      "type": "select_one wq1dt68",
+      "name": "st_7",
+      "label": "معظم الاحيان اشعر بالتعب الشديد",
+      "required": "false",
+      "appearance": "list-nolabel"
+    },
+    {
+      "type": "select_one wq1dt68",
+      "name": "st_8",
+      "label": "افكاري غير مرتبطة بما اقوم به من اعمال",
+      "required": "false",
+      "appearance": "list-nolabel"
+    },
+    {
+      "type": "select_one wq1dt68",
+      "name": "st_9",
+      "label": "لست متحمسا للقيام بأشياء مختلفة",
+      "required": "false",
+      "appearance": "list-nolabel"
+    },
+    {
+      "type": "select_one wq1dt68",
+      "name": "st_10",
+      "label": "اشعر بعدم الراحة بسبب شعوري بعدم حصولي على النوم الكافي",
+      "required": "false",
+      "appearance": "list-nolabel"
+    },
+    {
+      "type": "select_one wq1dt68",
+      "name": "st_11",
+      "label": "كثيرا ما اتشتت بأفكار غير مرغوبة",
+      "required": "false",
+      "appearance": "list-nolabel"
+    },
+    {
+      "type": "select_one wq1dt68",
+      "name": "st_12",
+      "label": "اشعر عموما ان اعصابي مشدودة بدون سبب حقيقي لذلك",
+      "required": "false",
+      "appearance": "list-nolabel"
+    },
+    {
+      "type": "select_one wq1dt68",
+      "name": "st_13",
+      "label": "اشعر في كثير من الاوقات وكان راسي سينفجر",
+      "required": "false",
+      "appearance": "list-nolabel"
+    },
+    {
+      "type": "select_one wq1dt68",
+      "name": "st_14",
+      "label": "اشعر انني متردد جدا في اتخاذ قراراتي",
+      "required": "false",
+      "appearance": "list-nolabel"
+    },
+    {
+      "type": "select_one wq1dt68",
+      "name": "st_15",
+      "label": "اشعر ان الاشياء الصغيرة والتافهة اصبحت تزعجني",
+      "required": "false",
+      "appearance": "list-nolabel"
+    },
+    {
+      "type": "select_one wq1dt68",
+      "name": "st_16",
+      "label": "لا املك الطاقة الكافية للقيام بواجباتي اليومية",
+      "required": "false",
+      "appearance": "list-nolabel"
+    },
+    {
+      "type": "select_one wq1dt68",
+      "name": "st_17",
+      "label": "اؤجل قراراتي غالبا في اوقات يجب علي اتخاذها",
+      "required": "false",
+      "appearance": "list-nolabel"
+    },
+    {
+      "type": "select_one wq1dt68",
+      "name": "st_18",
+      "label": "اجد ان مشاعري تجرح بسهولة",
+      "required": "false",
+      "appearance": "list-nolabel"
+    },
+    {
+      "type": "select_one wq1dt68",
+      "name": "st_19",
+      "label": "كثيرا ما اشعر بالارتجاف في اطرافي",
+      "required": "false",
+      "appearance": "list-nolabel"
+    },
+    {
+      "type": "select_one wq1dt68",
+      "name": "st_20",
+      "label": "كثيرا ما اتجنب اتخاذ القرارات",
+      "required": "false",
+      "appearance": "list-nolabel"
+    },
+    {
+      "type": "select_one wq1dt68",
+      "name": "st_21",
+      "label": "ابالغ في رد فعلي تجاه المشكلات العادية والبسيطة",
+      "required": "false",
+      "appearance": "list-nolabel"
+    },
+    {
+      "type": "select_one wq1dt68",
+      "name": "st_22",
+      "label": "كثيرا ما ينتابني تصبب العرق",
+      "required": "false",
+      "appearance": "list-nolabel"
+    },
+    {
+      "type": "select_one wq1dt68",
+      "name": "st_23",
+      "label": "امور حياتي خارجة عن نطاق سيطرتي",
+      "required": "false",
+      "appearance": "list-nolabel"
+    },
+    {
+      "type": "select_one wq1dt68",
+      "name": "st_24",
+      "label": "تنتابني العصبية لأبسط الاصوات المفاجئة",
+      "required": "false",
+      "appearance": "list-nolabel"
+    },
+    {
+      "type": "select_one wq1dt68",
+      "name": "st_25",
+      "label": "كثيرا ما اشعر بتزايد نبضات قلبي",
+      "required": "false",
+      "appearance": "list-nolabel"
+    },
+    {
+      "type": "select_one wq1dt68",
+      "name": "st_26",
+      "label": "اشغر انني ضحية للظروف لا حول ولا قوة",
+      "required": "false",
+      "appearance": "list-nolabel"
+    },
+    {
+      "type": "select_one wq1dt68",
+      "name": "st_27",
+      "label": "كثيرا ما اعاني من مشاعر القلق بدون سبب ظاهر",
+      "required": "false",
+      "appearance": "list-nolabel"
+    },
+    {
+      "type": "select_one wq1dt68",
+      "name": "st_28",
+      "label": "كثيرا ما يصيبني الارق",
+      "required": "false",
+      "appearance": "list-nolabel"
+    },
+    {
+      "type": "select_one wq1dt68",
+      "name": "st_29",
+      "label": "كثيرا ما اعاني من نوبات الخوف",
+      "required": "false",
+      "appearance": "list-nolabel"
+    },
+    {
+      "type": "select_one wq1dt68",
+      "name": "st_30",
+      "label": "كثيرا ما ينتابني الكوابيس",
+      "required": "false",
+      "appearance": "list-nolabel"
+    },
+    {
+      "type": "select_one wq1dt68",
+      "name": "st_31",
+      "label": "اتوقع اسوأ العواقب لأية مخاطر مهما كانت بسيطة",
+      "required": "false",
+      "appearance": "list-nolabel"
+    },
+    {
+      "type": "select_one wq1dt68",
+      "name": "st_32",
+      "label": "اعاني من النوم المتقطع",
+      "required": "false",
+      "appearance": "list-nolabel"
+    },
+    {
+      "type": "select_one wq1dt68",
+      "name": "st_33",
+      "label": " احس بمسؤولية شخصية تجاه حدوث اي شيء خاطئ ",
+      "required": "false",
+      "appearance": "list-nolabel"
+    },
+    {
+      "type": "select_one wq1dt68",
+      "name": "st_34",
+      "label": "غالبا ما اكون منهمك القوى",
+      "required": "false",
+      "appearance": "list-nolabel"
+    },
+    {
+      "type": "select_one wq1dt68",
+      "name": "st_35",
+      "label": "اضخم الاشياء بأفكاري حتى البسيطة منها ",
+      "required": "false",
+      "appearance": "list-nolabel"
+    },
+    {
+      "type": "end_group"
+    },
+    {
+      "type": "calculate",
+      "name": "calculation_004",
+      "required": "false",
+      "calculation": "${st_1} +${st_2} +${st_3} +${st_4} +${st_5} +${st_6} +${st_7} +${st_8} +${st_9} +${st_10} +${st_11} +${st_12} +${st_13} +${st_14} +${st_15} +${st_16} +${st_17} +${st_18} +${st_19} +${st_20} +${st_21} +${st_22} +${st_23} +${st_24} +${st_25} +${st_26} +${st_27} +${st_28} +${st_29} +${st_30} +${st_31} +${st_32} +${st_33} +${st_34} +${st_35}"
+    },
+    {
+      "type": "begin_group",
+      "name": "q6",
+      "appearance": "field-list",
+      "relevant": "${_} = 'q6'"
+    },
+    {
+      "type": "select_one se7kw59",
+      "name": "q6_header",
+      "label": "مقياس اضطراب ما بعد الصدمة PTSD",
+      "hint": " طريقة الصحيح وتفسير النتائج: عدد الفقرات 30 فقرة \\ العلامة الكلية للمقياس يتم بجمع الارقام التي تم الحصول عليها وهي تتراوح بين (صفر - 90) \\ تفسير النتائج اعتبر ان العلامة (صفر-30) لا يوجد اضطراب\\ (31-40) اضطراب بسيط\\(41-50) اضطراب متوسط\\ (51-60) اضطراب شديد\\(61-90) اضطراب حاد جدا.",
+      "appearance": "label"
+    },
+    {
+      "type": "select_one se7kw59",
+      "name": "ptsd_1",
+      "label": "هل تتكرر لديك الأفكار المتعلقة بالحدث الصادم",
+      "required": "false",
+      "appearance": "list-nolabel"
+    },
+    {
+      "type": "select_one se7kw59",
+      "name": "ptsd_2",
+      "label": "هل تتكرر لديك المشاهد )الصور( المتعلقة بالحدث الصادم",
+      "required": "false",
+      "appearance": "list-nolabel"
+    },
+    {
+      "type": "select_one se7kw59",
+      "name": "ptsd_3",
+      "label": "هل تشعر بالخوف من تكرار الحدث الصادم",
+      "required": "false",
+      "appearance": "list-nolabel"
+    },
+    {
+      "type": "select_one se7kw59",
+      "name": "ptsd_4",
+      "label": "هل تحلم أحلاما مزعجة (كوابيس) تتعلق بالحدث الصادم",
+      "required": "false",
+      "appearance": "list-nolabel"
+    },
+    {
+      "type": "select_one se7kw59",
+      "name": "ptsd_5",
+      "label": "هل تشعر بالانزعاج عند رؤية شخص يذكرك بالحدث الصادم",
+      "required": "false",
+      "appearance": "list-nolabel"
+    },
+    {
+      "type": "select_one se7kw59",
+      "name": "ptsd_6",
+      "label": "هل تشعر بالانزعاج عند رؤية صور تذكرك بالحدث الصادم",
+      "required": "false",
+      "appearance": "list-nolabel"
+    },
+    {
+      "type": "select_one se7kw59",
+      "name": "ptsd_7",
+      "label": "هل تشعر بالانزعاج عند رؤية مكان الحدث الصادم أو التواجدفيه",
+      "required": "false",
+      "appearance": "list-nolabel"
+    },
+    {
+      "type": "select_one se7kw59",
+      "name": "ptsd_8",
+      "label": "هل تتجنب التفكير في الحدث الصادم",
+      "required": "false",
+      "appearance": "list-nolabel"
+    },
+    {
+      "type": "select_one se7kw59",
+      "name": "ptsd_9",
+      "label": "هل تتجنب الحديث عن الحدث الصادم",
+      "required": "false",
+      "appearance": "list-nolabel"
+    },
+    {
+      "type": "select_one se7kw59",
+      "name": "ptsd_10",
+      "label": "هل تتجنب المواقف التي تذكرك بالحدث الصادم",
+      "required": "false",
+      "appearance": "list-nolabel"
+    },
+    {
+      "type": "select_one se7kw59",
+      "name": "ptsd_11",
+      "label": "هل تتجنب النشاطات التي تذكرك بالحدث الصادم",
+      "required": "false",
+      "appearance": "list-nolabel"
+    },
+    {
+      "type": "select_one se7kw59",
+      "name": "ptsd_12",
+      "label": "هل تتجنب المشاركة في الأنشطة الترفيهية",
+      "required": "false",
+      "appearance": "list-nolabel"
+    },
+    {
+      "type": "select_one se7kw59",
+      "name": "ptsd_13",
+      "label": "هل تبتعد عن الأصدقاء (تميل إلى الوحدة)",
+      "required": "false",
+      "appearance": "list-nolabel"
+    },
+    {
+      "type": "select_one se7kw59",
+      "name": "ptsd_14",
+      "label": "هل يراودك شعور بالذنب تجاه الذات",
+      "required": "false",
+      "appearance": "list-nolabel"
+    },
+    {
+      "type": "select_one se7kw59",
+      "name": "ptsd_15",
+      "label": "هل ت ا رودك مشاعر سلبية تجاه الآخرين",
+      "required": "false",
+      "appearance": "list-nolabel"
+    },
+    {
+      "type": "select_one se7kw59",
+      "name": "ptsd_16",
+      "label": "هل تعاني من عدم القدرة على الإنجاز (تحقيق الأهداف)",
+      "required": "false",
+      "appearance": "list-nolabel"
+    },
+    {
+      "type": "select_one se7kw59",
+      "name": "ptsd_17",
+      "label": "هل تجد صعوبة في التركيز",
+      "required": "false",
+      "appearance": "list-nolabel"
+    },
+    {
+      "type": "select_one se7kw59",
+      "name": "ptsd_18",
+      "label": "هل تجد صعوبة في النوم لعدة ساعات",
+      "required": "false",
+      "appearance": "list-nolabel"
+    },
+    {
+      "type": "select_one se7kw59",
+      "name": "ptsd_19",
+      "label": "هل تشعر بالحذر بشكل متزايد",
+      "required": "false",
+      "appearance": "list-nolabel"
+    },
+    {
+      "type": "select_one se7kw59",
+      "name": "ptsd_20",
+      "label": "هل تشعر بالغضب بدون مبرر",
+      "required": "false",
+      "appearance": "list-nolabel"
+    },
+    {
+      "type": "select_one se7kw59",
+      "name": "ptsd_21",
+      "label": "هل تمارس العنف / السلوك العدواني ضد الآخرين",
+      "required": "false",
+      "appearance": "list-nolabel"
+    },
+    {
+      "type": "select_one se7kw59",
+      "name": "ptsd_22",
+      "label": "هل تقوم بمعاقبة نفسك (كالحرمان مثلا)",
+      "required": "false",
+      "appearance": "list-nolabel"
+    },
+    {
+      "type": "select_one se7kw59",
+      "name": "ptsd_23",
+      "label": "هل تقوم بسلوك اندفاعي بدون إعطاء وقت كاف للتفكير",
+      "required": "false",
+      "appearance": "list-nolabel"
+    },
+    {
+      "type": "select_one se7kw59",
+      "name": "ptsd_24",
+      "label": "هل لديك الرغبة بتكسير الأشياء (صحون، كاسات، أدوات ...)",
+      "required": "false",
+      "appearance": "list-nolabel"
+    },
+    {
+      "type": "select_one se7kw59",
+      "name": "ptsd_25",
+      "label": "هل لديك الرغبة لممارسة الألعاب العنيفة (الملاكمة، المصارعة،الكاراتيه)",
+      "required": "false",
+      "appearance": "list-nolabel"
+    },
+    {
+      "type": "select_one se7kw59",
+      "name": "ptsd_26",
+      "label": "هل لديك الرغبة لممارسة الألعاب العنيفة على الجوال /الكمبيوتر",
+      "required": "false",
+      "appearance": "list-nolabel"
+    },
+    {
+      "type": "select_one se7kw59",
+      "name": "ptsd_27",
+      "label": "هل يحصل لديك تسارع في نبضات القلب عند تذكر الحدثالصادم",
+      "required": "false",
+      "appearance": "list-nolabel"
+    },
+    {
+      "type": "select_one se7kw59",
+      "name": "ptsd_28",
+      "label": "هل يحصل لديك تسارع أو ضيق في التنفس عند تذكر الحدثالصادم",
+      "required": "false",
+      "appearance": "list-nolabel"
+    },
+    {
+      "type": "select_one se7kw59",
+      "name": "ptsd_29",
+      "label": "هل يحدث لديك تع رق عند تذكر الحدث الصادم",
+      "required": "false",
+      "appearance": "list-nolabel"
+    },
+    {
+      "type": "select_one se7kw59",
+      "name": "ptsd_30",
+      "label": "هل لديك الرغبة بالتقيؤ والشعور بالغثيان عند تذكر الحدثالصادم",
+      "required": "false",
+      "appearance": "list-nolabel"
+    },
+    {
+      "type": "end_group"
+    },
+    {
+      "type": "calculate",
+      "name": "calculation_005",
+      "required": "false",
+      "calculation": "${ptsd_1} +${ptsd_2} +${ptsd_3} +${ptsd_4} +${ptsd_5} +${ptsd_6} +${ptsd_7} +${ptsd_8} +${ptsd_9} +${ptsd_10} +${ptsd_11} +${ptsd_12} +${ptsd_13} +${ptsd_14} +${ptsd_15} +${ptsd_16} +${ptsd_17} +${ptsd_18} +${ptsd_19} +${ptsd_20} +${ptsd_21} +${ptsd_22} +${ptsd_23} +${ptsd_24} +${ptsd_25} +${ptsd_26} +${ptsd_27} +${ptsd_28} +${ptsd_29} +${ptsd_30}"
+    },
+    {
+      "type": "begin_group",
+      "name": "q7",
+      "appearance": "field-list",
+      "relevant": "${_} = 'q7'"
+    },
+    {
+      "type": "select_one ec5pq68",
+      "name": "q7_header",
+      "label": "مقياس فرط النشاط",
+      "hint": "طريقة الصحيح وتفسير النتائج: عدد الفقرات 30 فقرة \\ العلامة الكلية للمقياس يتم بجمع الارقام التي تم الحصول عليها وهي تتراوح بين (صفر - 66)\\ تتفاوت نسبة النشاط باختلاف الدرجة النهائية (0-33) طبيعي\\(34-66) لديه نشاطزائد\\الطفل في الصف الاول يعد لديه نشاط زائد اذا حصل على درجة (47-66)",
+      "appearance": "label"
+    },
+    {
+      "type": "select_one ec5pq68",
+      "name": "ac_1",
+      "label": "كثير النشاط ولا يهدأ",
+      "required": "false",
+      "appearance": "list-nolabel"
+    },
+    {
+      "type": "select_one ec5pq68",
+      "name": "ac_2",
+      "label": "تسهل استثارته",
+      "required": "false",
+      "appearance": "list-nolabel"
+    },
+    {
+      "type": "select_one ec5pq68",
+      "name": "ac_3",
+      "label": "كثير الشغب",
+      "required": "false",
+      "appearance": "list-nolabel"
+    },
+    {
+      "type": "select_one ec5pq68",
+      "name": "ac_4",
+      "label": "يقلق راحة زملائه",
+      "required": "false",
+      "appearance": "list-nolabel"
+    },
+    {
+      "type": "select_one ec5pq68",
+      "name": "ac_5",
+      "label": "يتشتت انتباهه بسهولة",
+      "required": "false",
+      "appearance": "list-nolabel"
+    },
+    {
+      "type": "select_one ec5pq68",
+      "name": "ac_6",
+      "label": "اذا اعطي سؤالا يندفع نحو الاجابة دون تفكير",
+      "required": "false",
+      "appearance": "list-nolabel"
+    },
+    {
+      "type": "select_one ec5pq68",
+      "name": "ac_7",
+      "label": "لا يستطيع اتمام واجباته المدرسية",
+      "required": "false",
+      "appearance": "list-nolabel"
+    },
+    {
+      "type": "select_one ec5pq68",
+      "name": "ac_8",
+      "label": "لا يثبت في مكان واحد لمدة طويلة (10 دقائق مثلا)",
+      "required": "false",
+      "appearance": "list-nolabel"
+    },
+    {
+      "type": "select_one ec5pq68",
+      "name": "ac_9",
+      "label": "لا يلتزم بالتعليمات",
+      "required": "false",
+      "appearance": "list-nolabel"
+    },
+    {
+      "type": "select_one ec5pq68",
+      "name": "ac_10",
+      "label": "متقلب المزاج",
+      "required": "false",
+      "appearance": "list-nolabel"
+    },
+    {
+      "type": "select_one ec5pq68",
+      "name": "ac_11",
+      "label": "يرغب في ان تجاب طلباته في الحال",
+      "required": "false",
+      "appearance": "list-nolabel"
+    },
+    {
+      "type": "select_one ec5pq68",
+      "name": "ac_12",
+      "label": "حاد المزاج وسريع الانفعال",
+      "required": "false",
+      "appearance": "list-nolabel"
+    },
+    {
+      "type": "select_one ec5pq68",
+      "name": "ac_13",
+      "label": "لا يمكن التنبؤ بسلوكياته",
+      "required": "false",
+      "appearance": "list-nolabel"
+    },
+    {
+      "type": "select_one ec5pq68",
+      "name": "ac_14",
+      "label": "يبكي لأبسط الاسباب",
+      "required": "false",
+      "appearance": "list-nolabel"
+    },
+    {
+      "type": "select_one ec5pq68",
+      "name": "ac_15",
+      "label": "لا يستطيع متابعة شرح المدرس في الفصل",
+      "required": "false",
+      "appearance": "list-nolabel"
+    },
+    {
+      "type": "select_one ec5pq68",
+      "name": "ac_16",
+      "label": "ضيق الصدر ولا يتحمل الاخرين",
+      "required": "false",
+      "appearance": "list-nolabel"
+    },
+    {
+      "type": "select_one ec5pq68",
+      "name": "ac_17",
+      "label": "يندفع الى السلوك دون حساب ما يترتب عليه من نتائج",
+      "required": "false",
+      "appearance": "list-nolabel"
+    },
+    {
+      "type": "select_one ec5pq68",
+      "name": "ac_18",
+      "label": "لا يستطيع ان يقضي وقتا طويلا (10 دقائق ) في لعبة",
+      "required": "false",
+      "appearance": "list-nolabel"
+    },
+    {
+      "type": "select_one ec5pq68",
+      "name": "ac_19",
+      "label": "عندما يغضب لا يستطيع ضبط نفسه ويتفوه بألفاظ نابية",
+      "required": "false",
+      "appearance": "list-nolabel"
+    },
+    {
+      "type": "select_one ec5pq68",
+      "name": "ac_20",
+      "label": "يتحدث بصوت مرتفع فجأة دون مراعاة النظام",
+      "required": "false",
+      "appearance": "list-nolabel"
+    },
+    {
+      "type": "select_one ec5pq68",
+      "name": "ac_21",
+      "label": "يصعب عليه تكوين علاقات طيبة مع زملائه",
+      "required": "false",
+      "appearance": "list-nolabel"
+    },
+    {
+      "type": "select_one ec5pq68",
+      "name": "ac_22",
+      "label": "يصعب عليه تكوين علاقات طيبة مع مدرسيه",
+      "required": "false",
+      "appearance": "list-nolabel"
+    },
+    {
+      "type": "end_group"
+    },
+    {
+      "type": "calculate",
+      "name": "calculation_006",
+      "required": "false",
+      "calculation": "${ac_1} +${ac_2} +${ac_3} +${ac_4} +${ac_5} +${ac_6} +${ac_7} +${ac_8} +${ac_9} +${ac_10} +${ac_11} +${ac_12} +${ac_13} +${ac_14} +${ac_15} +${ac_16} +${ac_17} +${ac_18} +${ac_19} +${ac_20} +${ac_21} +${ac_22}"
+    },
+    {
+      "type": "begin_group",
+      "name": "__009",
+      "appearance": "field-list",
+      "relevant": "${_} = 'q8'"
+    },
+    {
+      "type": "select_one zc2eo67",
+      "name": "__009_header",
+      "label": "مقياس التبول اللاارادي",
+      "hint": "طريقة الصحيح وتفسير النتائج: عدد الفقرات 20 فقرة\\الدرجة النهائية بين صفر-20 تكون الدرجة (0-5) ضمن النمو الطبيعي للاطفال الاصغر عمرا\\ الدرجة (6-10) متوسط يحتاج للمتابعة المنزلية\\ الدرجة (11-15) يفضل استشارة الطبيب مع الأخصائي النفسي\\ (16-20) خطر عالي يتطلب تدخل طبي فوري وعاجل.",
+      "appearance": "label"
+    },
+    {
+      "type": "select_one zc2eo67",
+      "name": "b1",
+      "label": "يتبول الطفل في الفراش مرتين أو أكثر أسبوعيًا",
+      "required": "false",
+      "appearance": "list-nolabel"
+    },
+    {
+      "type": "select_one zc2eo67",
+      "name": "b2",
+      "label": "يعاني الطفل من نوم عميق جدًا يصعب إيقاظه منه",
+      "required": "false",
+      "appearance": "list-nolabel"
+    },
+    {
+      "type": "select_one zc2eo67",
+      "name": "b3",
+      "label": "لا يستيقظ الطفل عند الشعور بامتلاء المثانة",
+      "required": "false",
+      "appearance": "list-nolabel"
+    },
+    {
+      "type": "select_one zc2eo67",
+      "name": "b4",
+      "label": "يشرب الطفل كميات كبيرة من السوائل قبل النوم",
+      "required": "false",
+      "appearance": "list-nolabel"
+    },
+    {
+      "type": "select_one zc2eo67",
+      "name": "b5",
+      "label": "لا يذهب الطفل إلى الحمام قبل النوم بانتظام",
+      "required": "false",
+      "appearance": "list-nolabel"
+    },
+    {
+      "type": "select_one zc2eo67",
+      "name": "b6",
+      "label": "يعاني الطفل من إمساك متكرر",
+      "required": "false",
+      "appearance": "list-nolabel"
+    },
+    {
+      "type": "select_one zc2eo67",
+      "name": "b7",
+      "label": "يوجد تاريخ عائلي للتبول اللاإرادي",
+      "required": "false",
+      "appearance": "list-nolabel"
+    },
+    {
+      "type": "select_one zc2eo67",
+      "name": "b8",
+      "label": "يعاني الطفل من التهابات بولية متكررة",
+      "required": "false",
+      "appearance": "list-nolabel"
+    },
+    {
+      "type": "select_one zc2eo67",
+      "name": "b9",
+      "label": "بدأ التبول اللاإرادي بعد فترة كان فيها الطفل متحكمًا بالمثانة",
+      "required": "false",
+      "appearance": "list-nolabel"
+    },
+    {
+      "type": "select_one zc2eo67",
+      "name": "b10",
+      "label": "يشكو الطفل أحيانًا من ألم أو حرقة أثناء التبول",
+      "required": "false",
+      "appearance": "list-nolabel"
+    },
+    {
+      "type": "select_one zc2eo67",
+      "name": "b11",
+      "label": "مرّ الطفل بتغيير حديث (مدرسة جديدة، انتقال منزل، ولادة أخ جديد…)",
+      "required": "false",
+      "appearance": "list-nolabel"
+    },
+    {
+      "type": "select_one zc2eo67",
+      "name": "b12",
+      "label": "يظهر على الطفل توتر أو قلق ملحوظ",
+      "required": "false",
+      "appearance": "list-nolabel"
+    },
+    {
+      "type": "select_one zc2eo67",
+      "name": "b13",
+      "label": "يعاني الطفل من مخاوف ليلية أو كوابيس متكررة",
+      "required": "false",
+      "appearance": "list-nolabel"
+    },
+    {
+      "type": "select_one zc2eo67",
+      "name": "b14",
+      "label": "يبدو الطفل حساسًا جدًا للنقد أو العقاب",
+      "required": "false",
+      "appearance": "list-nolabel"
+    },
+    {
+      "type": "select_one zc2eo67",
+      "name": "b15",
+      "label": "يعاني الطفل من صعوبة في التعبير عن مشاعره",
+      "required": "false",
+      "appearance": "list-nolabel"
+    },
+    {
+      "type": "select_one zc2eo67",
+      "name": "b16",
+      "label": "يتعرض الطفل لضغط أكاديمي أو اجتماعي",
+      "required": "false",
+      "appearance": "list-nolabel"
+    },
+    {
+      "type": "select_one zc2eo67",
+      "name": "b17",
+      "label": "ينسحب الطفل اجتماعيًا أو يميل للعزلة",
+      "required": "false",
+      "appearance": "list-nolabel"
+    },
+    {
+      "type": "select_one zc2eo67",
+      "name": "b18",
+      "label": "تظهر على الطفل سلوكيات ارتدادية (مثل التعلق الزائد أو مص الإصبع)",
+      "required": "false",
+      "appearance": "list-nolabel"
+    },
+    {
+      "type": "select_one zc2eo67",
+      "name": "b19",
+      "label": "يشعر الطفل بالخجل الشديد بسبب التبول اللاإرادي",
+      "required": "false",
+      "appearance": "list-nolabel"
+    },
+    {
+      "type": "select_one zc2eo67",
+      "name": "b20",
+      "label": "يرفض الطفل المشاركة في أنشطة ليلية (مثل المبيت خارج المنزل) خوفًا من الحرج",
+      "required": "false",
+      "appearance": "list-nolabel"
+    },
+    {
+      "type": "end_group"
+    },
+    {
+      "type": "calculate",
+      "name": "calculation_007",
+      "required": "false",
+      "calculation": "${b1} +${b2} +${b3} +${b4} +${b5} +${b6} +${b7} +${b8} +${b9} +${b10} +${b1} +${b11} +${b12} +${b13} +${b14} +${b15} +${b16} +${b17} +${b18} +${b19} +${b20}"
+    },
+    {
+      "type": "begin_group",
+      "name": "__010",
+      "appearance": "field-list",
+      "relevant": "${_} = 'q9'"
+    },
+    {
+      "type": "select_one ap4ae03",
+      "name": "__010_header",
+      "label": "مقياس الانتحار",
+      "hint": "طريقة حساب النتيجة اجمع النقاط (0-20) الدرجة 0 – 4  خطر منخفض يوجد ضيق بسيط، يُنصح بالمتابعة الذاتية والدعم الاجتماعي. 5 – 9  خطر متوسط يُنصح بالتحدث مع شخص موثوق وطلب استشارة نفسية. 10 – 14 خطر مرتفع من الضروري التواصل مع مختص نفسي في أقرب وقت. 15 – 20 خطر شديد يجب طلب مساعدة فورية من مختص أو جهة طوارئ.",
+      "appearance": "label"
+    },
+    {
+      "type": "select_one ap4ae03",
+      "name": "su1",
+      "label": "أشعر أن حياتي بلا قيمة",
+      "required": "false",
+      "appearance": "list-nolabel"
+    },
+    {
+      "type": "select_one ap4ae03",
+      "name": "su2",
+      "label": "أشعر أنني عبء على عائلتي أو من حولي",
+      "required": "false",
+      "appearance": "list-nolabel"
+    },
+    {
+      "type": "select_one ap4ae03",
+      "name": "su3",
+      "label": "تراودني أفكار بأن الموت قد يكون راحة لي",
+      "required": "false",
+      "appearance": "list-nolabel"
+    },
+    {
+      "type": "select_one ap4ae03",
+      "name": "su4",
+      "label": "أفكر أحيانًا في إيذاء نفسي",
+      "required": "false",
+      "appearance": "list-nolabel"
+    },
+    {
+      "type": "select_one ap4ae03",
+      "name": "su5",
+      "label": "سبق أن خططت لطريقة يمكن أن أنهي بها حياتي",
+      "required": "false",
+      "appearance": "list-nolabel"
+    },
+    {
+      "type": "select_one ap4ae03",
+      "name": "su6",
+      "label": "شعر بيأس شديد تجاه المستقبل",
+      "required": "false",
+      "appearance": "list-nolabel"
+    },
+    {
+      "type": "select_one ap4ae03",
+      "name": "su7",
+      "label": "لا أرى أي مخرج لمشكلاتي الحالية",
+      "required": "false",
+      "appearance": "list-nolabel"
+    },
+    {
+      "type": "select_one ap4ae03",
+      "name": "su8",
+      "label": "فقدت الاهتمام بمعظم الأشياء التي كنت أستمتع بها",
+      "required": "false",
+      "appearance": "list-nolabel"
+    },
+    {
+      "type": "select_one ap4ae03",
+      "name": "su9",
+      "label": "أعاني من شعور دائم بالحزن أو الاكتئاب",
+      "required": "false",
+      "appearance": "list-nolabel"
+    },
+    {
+      "type": "select_one ap4ae03",
+      "name": "su10",
+      "label": " لدي صعوبة شديدة في النوم أو أفرط في النوم",
+      "required": "false",
+      "appearance": "list-nolabel"
+    },
+    {
+      "type": "select_one ap4ae03",
+      "name": "su11",
+      "label": "أعزل نفسي عن العائلة أو الأصدقاء",
+      "required": "false",
+      "appearance": "list-nolabel"
+    },
+    {
+      "type": "select_one ap4ae03",
+      "name": "su12",
+      "label": "أشعر بالغضب أو التقلبات المزاجية الشديدة",
+      "required": "false",
+      "appearance": "list-nolabel"
+    },
+    {
+      "type": "select_one ap4ae03",
+      "name": "su13",
+      "label": "لدي تاريخ سابق لمحاولة إيذاء نفسي أو الانتحار",
+      "required": "false",
+      "appearance": "list-nolabel"
+    },
+    {
+      "type": "select_one ap4ae03",
+      "name": "su14",
+      "label": "أتعاطى الكحول أو المخدرات بشكل مفرط",
+      "required": "false",
+      "appearance": "list-nolabel"
+    },
+    {
+      "type": "select_one ap4ae03",
+      "name": "su15",
+      "label": "مررت مؤخرًا بخسارة مؤلمة أو حدث صادم",
+      "required": "false",
+      "appearance": "list-nolabel"
+    },
+    {
+      "type": "select_one ap4ae03",
+      "name": "su16",
+      "label": "أشعر بوحدة شديدة حتى عندما أكون بين الناس",
+      "required": "false",
+      "appearance": "list-nolabel"
+    },
+    {
+      "type": "select_one ap4ae03",
+      "name": "su17",
+      "label": "أفكر أحيانًا أن الآخرين سيكونون أفضل حالًا بدوني",
+      "required": "false",
+      "appearance": "list-nolabel"
+    },
+    {
+      "type": "select_one ap4ae03",
+      "name": "su18",
+      "label": "أبحث عن معلومات أو وسائل يمكن استخدامها لإيذاء النفس",
+      "required": "false",
+      "appearance": "list-nolabel"
+    },
+    {
+      "type": "select_one ap4ae03",
+      "name": "su19",
+      "label": "أشعر بألم نفسي لا يُحتمل",
+      "required": "false",
+      "appearance": "list-nolabel"
+    },
+    {
+      "type": "select_one ap4ae03",
+      "name": "su20",
+      "label": "شعرت مؤخرًا بهدوء مفاجئ بعد فترة طويلة من الضيق الشديد",
+      "required": "false",
+      "appearance": "list-nolabel"
+    },
+    {
+      "type": "end_group"
+    },
+    {
+      "type": "calculate",
+      "name": "calculation_008",
+      "required": "false",
+      "calculation": "${su1} +${su2} +${su3} +${su4} +${su5} +${su6} +${su7} +${su8} +${su9} +${su10} +${su11} +${su12} +${su13} +${su14} +${su15} +${su16} +${su17} +${su18} +${su19} +${su20}"
+    }
+  ],
+  "choices": [
+    {
+      "list_name": "eh11m78",
+      "name": "1.",
+      "label": "انثى"
+    },
+    {
+      "list_name": "eh11m78",
+      "name": "2.",
+      "label": "ذكر"
+    },
+    {
+      "list_name": "ch2qm86",
+      "name": "q1",
+      "label": "مقياس العزلة"
+    },
+    {
+      "list_name": "ch2qm86",
+      "name": "q2",
+      "label": "مقياس الاكتئاب"
+    },
+    {
+      "list_name": "ch2qm86",
+      "name": "q3",
+      "label": "مقياس العدوانية"
+    },
+    {
+      "list_name": "ch2qm86",
+      "name": "q4",
+      "label": "مقياس الصحة النفسية"
+    },
+    {
+      "list_name": "ch2qm86",
+      "name": "q5",
+      "label": "مقياس القلق والتوتر"
+    },
+    {
+      "list_name": "ch2qm86",
+      "name": "q6",
+      "label": "مقياس اضطراب ما بعد الصدمة PTSD"
+    },
+    {
+      "list_name": "ch2qm86",
+      "name": "q7",
+      "label": "مقياس فرط النشاط"
+    },
+    {
+      "list_name": "ch2qm86",
+      "name": "q8",
+      "label": "مقياس التبول اللاارادي"
+    },
+    {
+      "list_name": "ch2qm86",
+      "name": "q9",
+      "label": "مقياس الانتحار"
+    },
+    {
+      "list_name": "qv09c88",
+      "name": "3",
+      "label": "اوافق بشدة"
+    },
+    {
+      "list_name": "qv09c88",
+      "name": "2",
+      "label": "اوافق"
+    },
+    {
+      "list_name": "qv09c88",
+      "name": "1",
+      "label": "غير متأكد"
+    },
+    {
+      "list_name": "qv09c88",
+      "name": "0",
+      "label": "لا اوافق"
+    },
+    {
+      "list_name": "fa86q45",
+      "name": "0",
+      "label": "كلا"
+    },
+    {
+      "list_name": "fa86q45",
+      "name": "1",
+      "label": "احيانا"
+    },
+    {
+      "list_name": "fa86q45",
+      "name": "2",
+      "label": "غالبا"
+    },
+    {
+      "list_name": "fa86q45",
+      "name": "3",
+      "label": "نعم تماما"
+    },
+    {
+      "list_name": "to2mv81",
+      "name": "0",
+      "label": "لا يحدث"
+    },
+    {
+      "list_name": "to2mv81",
+      "name": "1",
+      "label": "احيانا"
+    },
+    {
+      "list_name": "to2mv81",
+      "name": "2",
+      "label": "باستمرار"
+    },
+    {
+      "list_name": "xm6zh72",
+      "name": "1",
+      "label": "ينطبق"
+    },
+    {
+      "list_name": "xm6zh72",
+      "name": "0",
+      "label": "لا ينطبق"
+    },
+    {
+      "list_name": "wq1dt68",
+      "name": "0",
+      "label": "لا ينطبق"
+    },
+    {
+      "list_name": "wq1dt68",
+      "name": "1",
+      "label": "احيانا"
+    },
+    {
+      "list_name": "wq1dt68",
+      "name": "2",
+      "label": "كثيرا"
+    },
+    {
+      "list_name": "se7kw59",
+      "name": "0",
+      "label": " أبداً لم يحصل"
+    },
+    {
+      "list_name": "se7kw59",
+      "name": "1",
+      "label": "أحيانا (حصل مرة في الأسبوع)"
+    },
+    {
+      "list_name": "se7kw59",
+      "name": "2",
+      "label": "غالبا (حصل 2 – 4 مرات في الأسبوع)"
+    },
+    {
+      "list_name": "se7kw59",
+      "name": "3",
+      "label": "دائما (حصل 5 مرات او اكثر في الاسبوع)"
+    },
+    {
+      "list_name": "ec5pq68",
+      "name": "1",
+      "label": "نهائيا"
+    },
+    {
+      "list_name": "ec5pq68",
+      "name": "2",
+      "label": "بعض الاحيان"
+    },
+    {
+      "list_name": "ec5pq68",
+      "name": "3",
+      "label": "كثيرا"
+    },
+    {
+      "list_name": "ec5pq68",
+      "name": "4",
+      "label": "دائما"
+    },
+    {
+      "list_name": "zc2eo67",
+      "name": "1",
+      "label": "اوافق"
+    },
+    {
+      "list_name": "zc2eo67",
+      "name": "0",
+      "label": "لا اوافق"
+    },
+    {
+      "list_name": "ap4ae03",
+      "name": "1",
+      "label": "اوافق"
+    },
+    {
+      "list_name": "ap4ae03",
+      "name": "0",
+      "label": "لا اوافق"
+    }
+  ],
+  "settings": []
+}

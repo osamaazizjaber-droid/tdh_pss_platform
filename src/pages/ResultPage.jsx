@@ -6,6 +6,7 @@ import Navbar from '../components/Navbar'
 import { Download, ArrowRight, CheckCircle, AlertTriangle, XCircle, AlertCircle } from 'lucide-react'
 import jsPDF from 'jspdf'
 import html2canvas from 'html2canvas'
+import TDH_LOGO_B64 from '../lib/tdhLogo'
 
 // Hard-coded theme colors (so html2canvas can resolve them without CSS vars)
 const C = {
@@ -199,15 +200,19 @@ export default function ResultPage() {
             {/* Logo */}
             <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem' }}>
               <div style={{
-                width: 48, height: 48,
-                background: `linear-gradient(135deg, ${C.orange}, ${C.orangeDark})`,
+                width: 56, height: 56,
+                background: 'white',
                 borderRadius: 12,
                 display: 'flex', alignItems: 'center', justifyContent: 'center',
-                color: C.white, fontWeight: 800, fontSize: '0.9rem',
-                boxShadow: '0 4px 12px rgba(243,112,33,0.35)',
-              }}>PSS</div>
+                boxShadow: '0 4px 12px rgba(243,112,33,0.2)',
+                border: `1px solid ${C.gray200}`,
+                overflow: 'hidden',
+                padding: 4,
+              }}>
+                <img src={TDH_LOGO_B64} alt="TDH Italy" style={{ width: 46, height: 46, objectFit: 'contain' }} />
+              </div>
               <div>
-                <div style={{ fontWeight: 800, fontSize: '1.05rem', color: C.navy }}>منصة التقييم النفسي</div>
+                <div style={{ fontWeight: 800, fontSize: '1.05rem', color: C.navy }}>تقييم المقاييس و الاختبارات النفسية</div>
                 <div style={{ fontSize: '0.8rem', color: C.gray500 }}>Terre des hommes Italy</div>
               </div>
             </div>
@@ -352,7 +357,7 @@ export default function ResultPage() {
             paddingTop: '1rem', borderTop: `1px solid ${C.gray200}`,
             fontSize: '0.75rem', color: C.gray500,
           }}>
-            <span>تم إنشاء هذا التقرير بواسطة منصة التقييم النفسي — Terre des hommes Italy</span>
+            <span>تم إنشاء هذا التقرير بواسطة تقييم المقاييس و الاختبارات النفسية — Terre des hommes Italy</span>
             <span>{new Date().toLocaleString('ar-IQ')}</span>
           </div>
         </div>

@@ -1,6 +1,7 @@
 import { useNavigate, useLocation, NavLink } from 'react-router-dom'
 import { useAuth } from '../contexts/AuthContext'
-import { Brain, LayoutDashboard, PlusCircle, LogOut, User } from 'lucide-react'
+import { LayoutDashboard, PlusCircle, LogOut, User } from 'lucide-react'
+import TDH_LOGO_B64 from '../lib/tdhLogo'
 
 export default function Navbar() {
   const { user, signOut } = useAuth()
@@ -15,11 +16,11 @@ export default function Navbar() {
     <nav className="navbar">
       <div className="navbar-inner">
         <NavLink to="/" className="navbar-brand" style={{ textDecoration: 'none' }}>
-          <div className="navbar-brand-logo">
-            <Brain size={22} />
+          <div className="navbar-brand-logo" style={{ background: 'white', padding: '3px', borderRadius: 8, overflow: 'hidden', display: 'flex', alignItems: 'center', justifyContent: 'center', width: 44, height: 44 }}>
+            <img src={TDH_LOGO_B64} alt="TDH Italy" style={{ width: 38, height: 38, objectFit: 'contain' }} />
           </div>
           <div className="navbar-title">
-            <strong>منصة التقييم النفسي</strong>
+            <strong>تقييم المقاييس و الاختبارات النفسية</strong>
             <span>Terre des hommes Italy</span>
           </div>
         </NavLink>

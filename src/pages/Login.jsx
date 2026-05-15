@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { useAuth } from '../contexts/AuthContext'
-import { Lock, Mail, Eye, EyeOff, Brain } from 'lucide-react'
+import { Lock, Mail, Eye, EyeOff } from 'lucide-react'
+import TDH_LOGO_B64 from '../lib/tdhLogo'
 
 export default function Login() {
   const { signIn } = useAuth()
@@ -28,11 +29,11 @@ export default function Login() {
       <div className="login-container animate-fade-in-up">
         {/* Logo */}
         <div className="login-logo">
-          <div className="login-logo-icon">
-            <Brain size={32} color="white" />
+          <div className="login-logo-icon" style={{ background: 'white', padding: '6px', boxShadow: '0 8px 24px rgba(243,112,33,0.4)' }}>
+            <img src={TDH_LOGO_B64} alt="TDH Italy" style={{ width: 48, height: 48, objectFit: 'contain', display: 'block' }} />
           </div>
           <div className="login-logo-text">
-            <strong>منصة التقييم النفسي</strong>
+            <strong>تقييم المقاييس و الاختبارات النفسية</strong>
             <span>Terre des hommes Italy</span>
           </div>
         </div>
